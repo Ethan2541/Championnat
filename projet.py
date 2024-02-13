@@ -115,7 +115,7 @@ class TimeoutError(Exception):
 def signal_handler(signum, frame):
     raise TimeoutError
 
-def optimiser_nj_selon_ne(equipes, ne_min=3, ne_max=11, timeout=10):
+def optimiser_nj_selon_ne(equipes, ne_min=3, ne_max=10, timeout=10):
     for ne in range(ne_min, ne_max+1):
         nj_min = 2*(ne-1)
         nj_max = ne*(ne-1)
